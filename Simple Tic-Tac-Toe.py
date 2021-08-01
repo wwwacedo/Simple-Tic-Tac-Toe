@@ -1,4 +1,4 @@
-def verifica_vencedor(celulas_do_jogo):  # user_input é uma String
+def verifica_vencedor(celulas_do_jogo):  
     combinacao_vencedora = [[0, 1, 2], [3, 4, 5], [6, 7, 8],  # horizontal
                             [0, 3, 6], [1, 4, 7], [2, 5, 8],  # vertical
                             [0, 4, 8], [2, 4, 6]]  # diagonal
@@ -27,8 +27,8 @@ def conta_caracteres(celulas_do_jogo):
 
 def status_do_jogo(celulas_do_jogo):
     status = ''
-    vencedor = verifica_vencedor(celulas_do_jogo)  # vencedor recebe o retorno da função verifica_vencedor
-    caracteres = conta_caracteres(celulas_do_jogo)  # caracteres recebe o retorno da função conta_caracteres
+    vencedor = verifica_vencedor(celulas_do_jogo)  
+    caracteres = conta_caracteres(celulas_do_jogo) 
     if len(vencedor) == 0 and caracteres[2] == 0:
         status = 'Draw'
     elif len(vencedor) == 1:
